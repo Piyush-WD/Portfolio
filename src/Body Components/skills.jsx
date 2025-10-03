@@ -1,6 +1,23 @@
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  Outlet,
+} from "react-router-dom";
+
 function Skills() {
+  const navigate = useNavigate();
+
+  function redirectHome() {
+    navigate("/");
+  }
   return (
     <div className="Tabs">
+      <p>
+        <button onClick={redirectHome}>{"<"} About Me</button>
+      </p>
       <h2>Data Structures & Algorithms</h2>
       <h3>
         <img src="src\assets\cpp_logo.png" style={{ height: "50px" }}></img>

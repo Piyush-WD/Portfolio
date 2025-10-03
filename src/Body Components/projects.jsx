@@ -1,6 +1,24 @@
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  Outlet,
+} from "react-router-dom";
+
 function Projects() {
+  const navigate = useNavigate();
+
+  function redirectHome() {
+    navigate("/");
+  }
+
   return (
     <div className="Tabs">
+      <p>
+        <button onClick={redirectHome}>{"<"} Go Home</button>
+      </p>
       <h2>Diabetes Prediction App</h2>
       <p>
         The Diabetes Prediction Website is a web-based platform designed to

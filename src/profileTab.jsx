@@ -1,9 +1,17 @@
 function ProfileTab() {
   return (
     <div className="profileTab">
-      <div className="profileImage">
-        <img className="pic1" src="src\assets\OIP.webp" alt="profile" />
+      <div className="profileHeader">
+        <img className="banner" src="src/assets/OIP.webp" alt="banner" />
+
+        {/* your round profile pic */}
+        <img
+          className="profilePic"
+          src="src\assets\WhatsApp Image 2025-10-03 at 21.13.30.jpeg"
+          alt="profile"
+        />
       </div>
+
       <div className="profileText">
         <h1 style={{ marginBottom: "0px" }}>Piyush Gupta</h1>
         <h2 style={{ fontSize: "15px", marginTop: "0px", paddingTop: "0px" }}>
@@ -53,7 +61,7 @@ function ProfileTab() {
           </p>
         </h2>
       </div>
-      <footer className="profileFooter">© 2025 Vibe coded by me</footer>
+      {/* <footer className="profileFooter">© 2025 Vibe coded by me</footer> */}
     </div>
   );
 }

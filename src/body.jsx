@@ -11,6 +11,7 @@ import Education from "./Body Components/education";
 import Achievements from "./Body Components/achievements";
 import Projects from "./Body Components/projects";
 import Skills from "./Body Components/skills";
+import Default from "./Body Components/default";
 
 function Layout() {
   return (
@@ -45,6 +46,10 @@ function Layout() {
       <div className="mainBody">
         <Outlet />
       </div>
+      <footer className="profileFooter" style={{ textAlign: "left" }}>
+        <hr />
+        _© 2025 Vibe coded by me. All rights reserved.
+      </footer>
     </div>
   );
 }
@@ -54,6 +59,7 @@ function Body() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<Default />}></Route>
           <Route path="/education" element={<Education />}></Route>
           <Route path="/skills" element={<Skills />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
