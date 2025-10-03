@@ -1,0 +1,199 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.profileTab {
+  margin: 10px;
+  margin-right: 5px;
+  border-radius: 20px;
+  width: 20%;
+  background-color: #212833;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+
+.profileImage {
+  padding: 0;
+}
+
+
+.pic1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+
+
+.profileText {
+  padding: 15px;
+  padding-top: 5px;
+  text-align: left;
+  font-family: "Alan Sans", sans-serif;
+  color: #E0E0E0;
+  flex-grow: 1;
+}
+
+
+.body {
+  margin: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+  width: 80%;
+  background-color: #C9D1D9;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  /* prevent whole body from scrolling */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.textBelowName {
+  font-weight: 200;
+}
+
+.profileFooter {
+  color: grey;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.bodyMainHeading {
+  margin-top: 0px;
+  width: 100%;
+  font-family: "Bitcount Prop Single Ink", system-ui;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1.2;
+  flex: 0 0 auto;
+  /* fixed height, won’t shrink */
+}
+
+.navBar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Bitcount Prop Single Ink", system-ui;
+  flex: 0 0 auto;
+  /* fixed, won’t collapse */
+}
+
+.navBar a {
+  text-decoration: none;
+}
+
+.mainBody {
+  display: flex;
+  flex: 1 1 auto;
+  /* grows & shrinks to fill leftover */
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 30px;
+  overflow-y: auto;
+  /* ✅ only this scrolls */
+}
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+  /* slim vertical scrollbar */
+  height: 6px;
+  /* slim horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* invisible track */
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9D1D9;
+  /* your theme color */
+  border-radius: 10px;
+  /* rounded thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9D1D9;
+  /* slightly darker on hover */
+}
+
+/* Optional: remove bottom/right corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  /* slim */
+  scrollbar-color: #C9D1D9 transparent;
+  /* thumb + transparent track */
+}
+
+.Tabs {
+  font-family: "Alan Sans", sans-serif;
+  width: 100%;
+  text-align: left;
+  margin-right: 25px;
+}
+
+.Tabs h2 {
+  margin-bottom: 5px;
+}
+
+.Tabs h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    /* allow container to grow */
+  }
+
+  .profileTab {
+    width: 100%;
+    margin: 5px 0;
+    overflow: visible;
+    /* no independent scroll */
+  }
+
+  .body {
+    width: 100%;
+    margin: 5px 0;
+    overflow: visible;
+    /* no independent scroll */
+  }
+
+  .mainBody {
+    overflow: visible;
+    /* let the content flow naturally */
+    padding-left: 10px;
+  }
+}
