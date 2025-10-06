@@ -6,6 +6,8 @@ import {
   useNavigate,
   Outlet,
 } from "react-router-dom";
+import image from "../assets/cpp_logo.png";
+import image2 from "../assets/R.png";
 
 function Skills() {
   const navigate = useNavigate();
@@ -20,12 +22,12 @@ function Skills() {
       </p>
       <h2>Data Structures & Algorithms</h2>
       <h3>
-        <img src="src\assets\cpp_logo.png" style={{ height: "50px" }}></img>
+        <img src={image} style={{ height: "50px" }}></img>
       </h3>
       <br />
       <h2>Web Development</h2>
       <h3>
-        <img src="src\assets\R.png" style={{ height: "50px" }}></img>
+        <img src={image2} style={{ height: "50px" }}></img>
       </h3>
       <br />
       <h2>Course Subjects</h2>

@@ -6,6 +6,7 @@ import {
   useNavigate,
   Outlet,
 } from "react-router-dom";
+import pic from "../assets/485225359-dc876769-e93d-4c7d-a633-96d36db0c66d.png";
 
 function Projects() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Projects() {
   return (
     <div className="Tabs">
       <p>
-        <button onClick={redirectHome}>{"<"} Go Home</button>
+        <button onClick={redirectHome}>{"<"} About Me</button>
       </p>
       <h2>Diabetes Prediction App</h2>
       <p>
@@ -34,10 +35,7 @@ function Projects() {
         <li>Python</li>
         <li>Flask</li>
       </ul>
-      <img
-        src="src\assets\485225359-dc876769-e93d-4c7d-a633-96d36db0c66d.png"
-        style={{ height: "400px" }}
-      />
+      <img src={pic} style={{ height: "400px" }} />
       <p>
         Check out the live app here:
         <a href="https://diabetes-prediction-app-ea8v.onrender.com">
